@@ -1,0 +1,33 @@
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="ProductModel.cs" company="">
+//   
+// </copyright>
+// <summary>
+//   The product model.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
+
+namespace MarketPlaceUI.Models
+{
+    /// <summary>
+    /// The product model.
+    /// </summary>
+    public class ProductModel
+    {
+        /// <summary>
+        /// Gets or sets the id.
+        /// </summary>
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Gets or sets the name.
+        /// </summary>
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the description.
+        /// </summary>
+        public string Description { get; set; }
+
+    }
+}
