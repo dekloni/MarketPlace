@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "index";
+}
+<div ng-app="myAppAdmin">
+    <h2>index of Admin</h2>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3" ng-controller="myAdminNavControlls">
+
+                <ul>
+                    <li>Categories</li>
+                    <li>Product</li>
+                    <li>Users</li>
+                    <li></li>
+                    <li>{{TestHeading}}</li>
+                </ul>
+
+            </div>
+            <div class="col-md-9">
+
+                <p>dsasdakjsd hfahjsdgf hjagsdhfj gadsgf asdgf uyasdf asdflasdipfabsd fiasdl fiaisd fabsd fu</p>
+
+            </div>
+        </div>
+        @*<div class="row-fluid">
+                <div class="span2">
+                    <!--Sidebar content-->
+                    fasdfasdf
+                </div>
+                <div class="span10">
+                    <!--Body content-->
+                    asd fasd fasd fasd fasd
+                </div>
+            </div>*@
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="~/Scripts/admin.js"></script>
+
+}
