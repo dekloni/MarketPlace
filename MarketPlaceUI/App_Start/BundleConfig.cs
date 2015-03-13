@@ -17,12 +17,20 @@ namespace MarketPlaceUI
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+<<<<<<< HEAD
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/bootstrap-theme.css",
+=======
+                      //"~/Scripts/bootstrap.js",
+                      "~/Scripts/respond.js"));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                      //"~/Content/bootstrap.css",
+>>>>>>> 0ca5167e5449ca8dae4758fb1b6926f08ab27e80
                       "~/Content/site.css"));
         }
     }
