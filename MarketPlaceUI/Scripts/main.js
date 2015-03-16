@@ -1,4 +1,21 @@
-﻿var app = angular.module('myApp', []);
+﻿var app = angular.module('myApp', ['ngRoute']);
+
+app.config(['$routeProvider',
+  function ($routeProvider) {
+      $routeProvider.
+        when('/cat', {
+            templateUrl: '/public-categories.html',
+            controller: 'MyController'
+        }).
+        when('/product/:phoneId', {
+            templateUrl: 'public-products.html',
+            controller: 'MyController'
+        }).
+        otherwise({
+            redirectTo: '/cat'
+        });
+  }]);
+
 
 app.controller("MyController", function ($scope, $http) {
 

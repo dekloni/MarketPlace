@@ -15,3 +15,10 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/* increased size on large monitors*/
+@media (min-width: 1500px) {
+    .container {
+        width: 1400px;
+    }
+}
