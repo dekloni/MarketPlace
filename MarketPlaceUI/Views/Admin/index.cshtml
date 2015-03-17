@@ -9,8 +9,8 @@
             <nav class="col-md-3 col-lg-2" ng-controller="myAdminNavControlls">
 
                 <ul class="nav">
-                    <li><a href="/admin/#/categories">Categories</a></li>
-                    <li><a href="/admin/#/products">Products</a></li>
+                    <li><a href="#/cat">Categories</a></li>
+                    <li><a href="#/product/5">Products</a></li>
                     <li>Users</li>
                     <li></li>
                     <li>{{TestHeading}}</li>
@@ -45,5 +45,6 @@
 
 @section scripts{
     <script src="~/Scripts/admin.js"></script>
+    <script src="~/Scripts/adminCategoriesController.js"></script>
 
 }

@@ -1,18 +1,6 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ProductsController.cs" company="FM">
-//   FM
-// </copyright>
-// <summary>
-//   The products controller.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-
-
+﻿
 using System.Collections.Generic;
-using System.Data.Entity.Core.Metadata.Edm;
 using System.Web.Http;
-using System.Web.Http.Results;
 using MarketPlaceUI.Models;
 
 namespace MarketPlaceUI.Controllers
@@ -31,7 +19,8 @@ namespace MarketPlaceUI.Controllers
         public IHttpActionResult Get()
         {
             return this.Get("latest");
-            //var list = new List<ProductModel>()
+
+//var list = new List<ProductModel>()
             //{
             //    new ProductModel() { Id = 1, Name = "Radeon290", Description = "SuperFast" }, 
             //    new ProductModel() { Id = 1, Name = "Radeon270", Description = "Moderate Speed" }, 
@@ -41,6 +30,8 @@ namespace MarketPlaceUI.Controllers
 
         public IHttpActionResult Get(string type)
         {
+
+
             var list = new List<ProductModel>();
             switch (type)
             {

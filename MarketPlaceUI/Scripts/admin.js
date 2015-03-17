@@ -3,16 +3,16 @@
 app.config(['$routeProvider',
   function ($routeProvider) {
       $routeProvider.
-        when('admin/cat', {
-            templateUrl: 'partials/Categories.html',
-            controller: 'PhoneListCtrl'
+        when('/cat', {
+            templateUrl: '/admin-categories.html',
+            controller: 'adminCategoriesController'
         }).
         when('/product/:phoneId', {
-            templateUrl: 'partials/products.html',
-            controller: 'PhoneDetailCtrl'
+            templateUrl: '/admin-products.html',
+            controller: 'myAdminNavControlls'
         }).
         otherwise({
-            redirectTo: '/phones'
+            redirectTo: '/cat'
         });
   }]);
 

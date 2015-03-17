@@ -24,10 +24,15 @@ namespace MarketPlaceUI.Models
         /// </summary>
         public string Name { get; set; }
 
+        public double Price { get; set; }
         /// <summary>
         /// Gets or sets the description.
         /// </summary>
         public string Description { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public CategoryModel CategoryModel { get; set; }
 
     }
 }
