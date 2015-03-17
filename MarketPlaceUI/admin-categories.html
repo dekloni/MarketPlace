@@ -7,10 +7,18 @@
 </div>
 
 <div>
-    <p ng-repeat="cat in categories">
+    <div class="row" ng-repeat="cat in categories">
 
-     {{cat.Name}}   {{cat.name}}
+        <div class="col-md-2">
+            <b> {{cat.Name}} </b>
+        </div>
 
-    </p>
+        <div class="col-md-8">
+            {{cat.Description}}
+        </div>
+
+        <a class="col-md-2" href="#/cat/{{cat.Id}}">Edit</a>
+
+    </div>
 
 </div>
