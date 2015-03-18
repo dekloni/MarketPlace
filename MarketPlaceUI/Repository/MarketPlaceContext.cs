@@ -23,7 +23,7 @@ namespace MarketPlaceUI.Repository
         public DbSet<CategoryModel> Categories { get; set; }
     }
 
-    public class MarketPlaceDatabaseInitializer : DropCreateDatabaseAlways<MarketPlaceContext> // re-creates every time the server starts
+    public class MarketPlaceDatabaseInitializer : DropCreateDatabaseIfModelChanges<MarketPlaceContext> // re-creates every time the server starts
     {
         protected override void Seed(MarketPlaceContext context)
         {

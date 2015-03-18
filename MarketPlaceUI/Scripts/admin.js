@@ -7,6 +7,10 @@ app.config(['$routeProvider',
             templateUrl: '/admin-categories.html',
             controller: 'adminCategoriesController'
         }).
+        when('/cat/:categoryId', {
+            templateUrl: '/admin-category-edit.html',
+            controller: 'adminCategoriesEditController'
+        }).
         when('/product/:phoneId', {
             templateUrl: '/admin-products.html',
             controller: 'myAdminNavControlls'

@@ -221,6 +221,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin-categories.html" />
+    <Content Include="admin-category-edit.html" />
     <Content Include="admin-products.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
@@ -231,6 +232,7 @@
     <Content Include="public-products.html" />
     <Content Include="Scripts\admin.js" />
     <Content Include="Scripts\adminCategoriesController.js" />
+    <Content Include="Scripts\adminCategoryEditController.js" />
     <Content Include="Scripts\angular-mocks.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />

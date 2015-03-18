@@ -12,6 +12,7 @@
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using MarketPlaceUI.Models;
 using MarketPlaceUI.Repository;
 
 namespace MarketPlaceUI.Controllers
@@ -46,19 +47,17 @@ namespace MarketPlaceUI.Controllers
             return Ok(_repository.GetCategories());
         }
 
-        // GET: api/Categories/5
-        /// <summary>
-        /// The get.
-        /// </summary>
-        /// <param name="id">
-        /// The id.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string"/>.
-        /// </returns>
-        public string Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return "value";
+            var record = _repository.Category(id);
+            if (record == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                return Ok(record);
+            }
         }
 
         // POST: api/Categories
@@ -68,8 +67,15 @@ namespace MarketPlaceUI.Controllers
         /// <param name="value">
         /// The value.
         /// </param>
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(CategoryModel value)
         {
+            var result = _repository.CreateCategory(value);
+            if (result > 0)
+                return Ok();
+            else
+            {
+                return BadRequest("Category could not be created");
+            }
         }
 
         // PUT: api/Categories/5
@@ -82,8 +88,16 @@ namespace MarketPlaceUI.Controllers
         /// <param name="value">
         /// The value.
         /// </param>
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(int id, CategoryModel value)
         {
+            var result =_repository.UpdateCategory(value);
+            if (result > 0)
+                return Ok();
+            else
+            {
+                return BadRequest();
+            }
+
         }
 
         // DELETE: api/Categories/5

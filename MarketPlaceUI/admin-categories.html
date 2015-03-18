@@ -1,10 +1,14 @@
 ﻿<h3>Admin categories</h3>
 
-<p>{{TestHeading}}</p>
+
 
 <div class="text-danger" ng-show="errorMessage">
     Problem {{errorMessage}}
 </div>
+
+<a href="#/cat/0">
+    <span class="glyphicon glyphicon-plus"></span><span>Add</span>
+</a>
 
 <div>
     <div class="row" ng-repeat="cat in categories">
@@ -22,3 +26,5 @@
     </div>
 
 </div>
+
+<p>TestAngular -{{TestHeading}}</p>
