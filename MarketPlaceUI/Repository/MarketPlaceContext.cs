@@ -19,30 +19,30 @@ namespace MarketPlaceUI.Repository
         {
             System.Data.Entity.Database.SetInitializer(new MarketPlaceDatabaseInitializer());
         }
-        public DbSet<ProductModel> Products { get; set; }
-        public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
     }
 
-    public class MarketPlaceDatabaseInitializer : DropCreateDatabaseIfModelChanges<MarketPlaceContext> // re-creates every time the server starts
+    public class MarketPlaceDatabaseInitializer : DropCreateDatabaseAlways<MarketPlaceContext> // re-creates every time the server starts
     {
         protected override void Seed(MarketPlaceContext context)
         {
-            var categories = new List<CategoryModel>();
-            categories.Add(new CategoryModel()
+            var categories = new List<Category>();
+            categories.Add(new Category()
             {
                 Id = 1,
                 Name = "Clothing",
                 Description = " Cheap clothing for any day or weather",
-                Products = new List<ProductModel>()
+                Products = new List<Product>()
                 {
-                    new ProductModel()
+                    new Product()
                     {
                         CategoryId = 1,
                         Name = "Jacket",
                          Description = "Super jacket",
                          Price = 99
                     },
-                    new ProductModel()
+                    new Product()
                     {
                         CategoryId = 2,
                         Name = "Trousers",
@@ -53,34 +53,38 @@ namespace MarketPlaceUI.Repository
             }
             );
 
-            categories.Add(new CategoryModel()
+            categories.Add(new Category()
             {
                 Id = 2,
                 Name = "Books",
                 Description = " Largest range of books on the web",
-                Products = new List<ProductModel>()
-                {
-                    new ProductModel()
-                    {
-                        CategoryId = 1,
-                        Name = "Hobbit",
-                         Description = "Hobbit great adventures",
-                         Price = 99
-                    },
-                    new ProductModel()
-                    {
-                        CategoryId = 2,
-                        Name = "Jurassic Park",
-                         Description = "Opening new type of zoo",
-                         Price = 100
-                    }
-                }
+               
             }
             );
 
             context.Categories.Add(categories[0]);
             context.Categories.Add(categories[1]);
-            
+
+            //var products = new List<Product>()
+            //{
+            //    new Product()
+            //    {
+            //        CategoryId = 1,
+            //        Name = "Hobbit",
+            //        Description = "Hobbit great adventures",
+            //        Price = 99
+            //    },
+            //    new Product()
+            //    {
+            //        CategoryId = 2,
+            //        Name = "Jurassic Park",
+            //        Description = "Opening new type of zoo",
+            //        Price = 100
+            //    }
+            //};
+            //context.Products.Add(products[0]);
+            //context.Products.Add(products[1]);
+
             //context.Categories = categories.to;
 
             base.Seed(context);

@@ -19,5 +19,15 @@ namespace MarketPlaceUI
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        public static void RegisterGlobalFilters(GlobalFilterCollection filters)
+        {
+            filters.Add(new HandleErrorAttribute());
+        }
+
+        private void Application_Error(Object sender, EventArgs e)
+        {
+
+        }
     }
 }

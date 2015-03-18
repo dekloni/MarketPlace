@@ -67,7 +67,7 @@ namespace MarketPlaceUI.Controllers
         /// <param name="value">
         /// The value.
         /// </param>
-        public IHttpActionResult Post(CategoryModel value)
+        public IHttpActionResult Post(Category value)
         {
             var result = _repository.CreateCategory(value);
             if (result > 0)
@@ -88,7 +88,7 @@ namespace MarketPlaceUI.Controllers
         /// <param name="value">
         /// The value.
         /// </param>
-        public IHttpActionResult Put(int id, CategoryModel value)
+        public IHttpActionResult Put(int id, Category value)
         {
             var result =_repository.UpdateCategory(value);
             if (result > 0)

@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ProductModel.cs" company="">
+// <copyright file="Product.cs" company="">
 //   
 // </copyright>
 // <summary>
@@ -12,7 +12,7 @@ namespace MarketPlaceUI.Models
     /// <summary>
     /// The product model.
     /// </summary>
-    public class ProductModel
+    public class Product
     {
         /// <summary>
         /// Gets or sets the id.
@@ -25,6 +25,7 @@ namespace MarketPlaceUI.Models
         public string Name { get; set; }
 
         public double Price { get; set; }
+
         /// <summary>
         /// Gets or sets the description.
         /// </summary>
@@ -32,7 +33,7 @@ namespace MarketPlaceUI.Models
 
         public int CategoryId { get; set; }
 
-        public CategoryModel CategoryModel { get; set; }
+        public Category Category { get; set; }
 
     }
 }

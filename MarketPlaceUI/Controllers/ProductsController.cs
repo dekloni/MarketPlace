@@ -20,10 +20,10 @@ namespace MarketPlaceUI.Controllers
         {
             return this.Get("latest");
 
-//var list = new List<ProductModel>()
+//var list = new List<Product>()
             //{
-            //    new ProductModel() { Id = 1, Name = "Radeon290", Description = "SuperFast" }, 
-            //    new ProductModel() { Id = 1, Name = "Radeon270", Description = "Moderate Speed" }, 
+            //    new Product() { Id = 1, Name = "Radeon290", Description = "SuperFast" }, 
+            //    new Product() { Id = 1, Name = "Radeon270", Description = "Moderate Speed" }, 
             //};
             //return Ok(list);
         }
@@ -32,17 +32,17 @@ namespace MarketPlaceUI.Controllers
         {
 
 
-            var list = new List<ProductModel>();
+            var list = new List<Product>();
             switch (type)
             {
                 case "popular":
-                    list.Add(new ProductModel() { Id = 1, Name = "Nvisa 980", Description = "SuperFast" });
-                    list.Add(new ProductModel() { Id = 1, Name = "Nvidia 760", Description = "Moderate Speed" });
+                    list.Add(new Product() { Id = 1, Name = "Nvisa 980", Description = "SuperFast" });
+                    list.Add(new Product() { Id = 1, Name = "Nvidia 760", Description = "Moderate Speed" });
                     break;
                 default:
 
-                    list.Add(new ProductModel() { Id = 1, Name = "Radeon290", Description = "SuperFast" });
-                    list.Add(new ProductModel() { Id = 1, Name = "Radeon270", Description = "Moderate Speed" });
+                    list.Add(new Product() { Id = 1, Name = "Radeon290", Description = "SuperFast" });
+                    list.Add(new Product() { Id = 1, Name = "Radeon270", Description = "Moderate Speed" });
                     break;
             }
             return Ok(list);

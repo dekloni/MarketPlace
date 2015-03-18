@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CategoryModel.cs" company="ER">
+// <copyright file="Category.cs" company="ER">
 //   ER
 // </copyright>
 // <summary>
@@ -9,13 +9,15 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MarketPlaceUI.Models
 {
     /// <summary>
     /// The category.
     /// </summary>
-    public class CategoryModel
+    //[Table("Category")]
+    public class Category
     {
         public int Id { get; set; }
 
@@ -23,6 +25,6 @@ namespace MarketPlaceUI.Models
 
         public string Description { get; set; }
 
-        public IEnumerable<ProductModel> Products { get; set; }
+        public ICollection<Product> Products { get; set; }
     }
 }

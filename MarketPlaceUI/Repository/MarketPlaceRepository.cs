@@ -23,25 +23,27 @@ namespace MarketPlaceUI.Repository
             Console.Write(obj);
         }
 
-        public IQueryable<CategoryModel> GetCategories()
+        public IQueryable<Category> GetCategories()
         {
-            return _context.Categories;
+            var query = _context.Categories.Include("Products");
+            return query.AsQueryable();
         }
-        public CategoryModel Category(int id)
+        public Category Category(int id)
         {
-            return _context.Categories.Find(id);
+            var query = _context.Categories.Include("Products");
+            return query.SingleOrDefault(p => p.Id == id);
         }
 
-        public int UpdateCategory(CategoryModel category)
+        public int UpdateCategory(Category category)
         {
 
             _context.Categories.Attach(category);
-            _context.Entry<CategoryModel>(category).State = EntityState.Modified;
+            _context.Entry<Category>(category).State = EntityState.Modified;
             return _context.SaveChanges();
 
         }
 
-        public int CreateCategory(CategoryModel value)
+        public int CreateCategory(Category value)
         {
             _context.Categories.Add(value);
             return _context.SaveChanges();
